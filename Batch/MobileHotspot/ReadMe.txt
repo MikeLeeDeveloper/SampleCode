@@ -11,7 +11,7 @@ Instructions:
 	2. Input y or n to change hop limit to mobile limit or windows default.
 	3. Be sure to revert back when no longer on hot spot for more stable connectivity.
 
-Extra Credit:
+Note:
 	If you are using your computer as a wifi repeater:
 		1. Open MobileHotspotHopLimit.bat in a text editor
 		2. Change:

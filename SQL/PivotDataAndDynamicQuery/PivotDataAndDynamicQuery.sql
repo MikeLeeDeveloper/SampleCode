@@ -1,10 +1,3 @@
-/*	Created By: Mike Lee
-	Created On: 2022-07-21
-	Description: Demonstrate the following topics:
-		1.  Unpivot dataset into normalized data.
-		2.  Dynamic query that will pivot normalized data 
-			and scale to any changes to the object's definition.
-*/
 ----Sample Dataset----
 DECLARE @Vehicles TABLE(
 [VehicleID] INT IDENTITY(1,1),
@@ -93,11 +86,6 @@ JOIN @InventoryEntity as ie on ia.[InventoryEntityID] = ie.[InventoryEntityID]
 WHERE ie.[InventoryEntityName] = 'Vehicle'
 
 ----Dynamic Query----
-/*	Normalizing data allow fields to be added to objects without modifying existing table structures. 
-	Pivoting normalized data to a human readable format requires an explicit declaration of all fields.
-	Dynamic queries allow reports of pivoted normalized data to scale to the current object definition 
-	without developer intervention. (It's a query that writes itself)
-*/
 --Declare Variables
 DECLARE @VehicleCol NVARCHAR(MAX) = ''
 DECLARE @VehicleColNull NVARCHAR(MAX) = ''
@@ -143,7 +131,7 @@ DECLARE @SQL NVARCHAR(MAX) =
 	/*	Note:	Since the scope of this exercise does not permit creating tables, the table variables 
 				have been recreated within this SQL statement to have a working dataset.
 				
-				Please skip down to ----Results---- (line 235) to view dynamic query statement
+				Please skip down to ----Results---- (line 223) to view dynamic query statement
 	*/
 
 	----Sample Dataset----
