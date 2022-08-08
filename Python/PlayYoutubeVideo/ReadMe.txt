@@ -5,14 +5,13 @@ Description
 	Modify PlayYoutubeVideo.py to set new video URL
 	
 Instructions:
-	1. Run RunPython.bat
+	1. Download and install Python3
+		https://www.python.org/downloads/
+	2. If first time running, under Resources directory run InstallResources.bat
+	3. Run RunPython.bat
 	
 Note:
-	1. Selenium must be installed into your local Python3. If you do not 
-	have Seleinum installed or would like to update your current version,
-	under the Selenium directory, double click InstallSelenium.bat.
-	
-	2. This program uses Google Chrome and ChromeDriver. The included chromedriver.exe 
+	This program uses Google Chrome and ChromeDriver. The included chromedriver.exe 
 	is for Chrome version 104. If chrome driver does not launch, download the correct
 	version of chrome driver for your machine by:
 		1. Open Chrome
