@@ -5,9 +5,10 @@ Description:
 	Program can also read but not write XLS files.
 	
 Instructions:
-	1. Place files into Input directory
-	2. Run RunPython.bat
-	3. Retrieve converted files from Output directory
+	1. If first time running, under Resources directory run InstallResources.bat
+	2. Place files into Input directory
+	3. Run RunPython.bat
+	4. Retrieve converted files from Output directory
 	
 Note:
 	Due to the variation in JSON formats, JSON files may not parse properly. 
