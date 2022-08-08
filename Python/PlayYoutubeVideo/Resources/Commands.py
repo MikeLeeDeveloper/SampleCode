@@ -10,7 +10,7 @@ currentDirectory = os.getcwd()
 
 def launchChrome(url):
 	#Navigate to URL
-	browser = webdriver.Chrome(currentDirectory + "\Selenium\chromedriver.exe")
+	browser = webdriver.Chrome(currentDirectory + "\\Resources\\chromedriver.exe")
 	#browser.maximize_window()
 	browser.get(url)
 
