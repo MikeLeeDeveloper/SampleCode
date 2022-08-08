@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<data>
+  <row>
+    <index>0</index>
+    <Category>Car</Category>
+    <Make>Honda</Make>
+    <Model>Civic</Model>
+    <Year>2008</Year>
+    <Color>Red</Color>
+    <Trim/>
+    <Mileage>80000</Mileage>
+  </row>
+  <row>
+    <index>1</index>
+    <Category>Car</Category>
+    <Make>Toyota</Make>
+    <Model>Tacoma</Model>
+    <Year>2016</Year>
+    <Color>White</Color>
+    <Trim>TRD Off-Road</Trim>
+    <Mileage>82000</Mileage>
+  </row>
+  <row>
+    <index>2</index>
+    <Category>Motorcycle</Category>
+    <Make>BMW</Make>
+    <Model>S1000RR</Model>
+    <Year>2022</Year>
+    <Color>Black</Color>
+    <Trim>M</Trim>
+    <Mileage>15000</Mileage>
+  </row>
+  <row>
+    <index>3</index>
+    <Category>Motorcycle</Category>
+    <Make>Yamaha</Make>
+    <Model>YZF-R1</Model>
+    <Year>2015</Year>
+    <Color>Red</Color>
+    <Trim/>
+    <Mileage>9000</Mileage>
+  </row>
+  <row>
+    <index>4</index>
+    <Category>Motorcycle</Category>
+    <Make>Suzuki</Make>
+    <Model>DRZ 400SM</Model>
+    <Year>2017</Year>
+    <Color>White</Color>
+    <Trim/>
+    <Mileage>4000</Mileage>
+  </row>
+</data>
