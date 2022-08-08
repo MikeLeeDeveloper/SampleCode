@@ -22,9 +22,10 @@ Note:
 		values
 		table
 	
-	Pandas library (data manipulation) will no longer support xlwt library in
-	future updates. At the time of this program's creation, the library is still
-	supported but the feature has been commented out. To enable feature:
+	Pandas library (data manipulation) will no longer support the xlwt library
+	(writing XLS) in future updates. At the time of this program's creation, the 
+	library is still supported but the feature has been commented out. 
+	To enable feature:
 		1. In InstallResources.bat under Resources directory, uncomment line 22
 			%USERPROFILE%/AppData/Local/Programs/Python/Python310/Scripts/pip.exe install xlwt
 		2. In ConvertFile.py, comment out line 36
