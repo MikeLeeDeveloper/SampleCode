@@ -1,0 +1,11 @@
+﻿InventoryNumber,Category,SubCategory,Make,Model,Year,Color,Trim,Mileage,Title
+6,Automobile,Pickup Truck,Ford,F-150,2019,Gray,Extended Range,64000,Clean
+4,Automobile,Coupe,Ford,Mustang,2022,Yellow,,1000,Clean
+7,Automobile,Van,Ford,Transit,2017,White,,37000,Clean
+9,Automobile,Sedan,Honda,Accord,2018,Gray,,84000,Clean
+1,Automobile,Sedan,Honda,Civic,2020,Red,EX,2000,Clean
+2,Automobile,Roadster,Honda,S2000,2008,Blue,,85000,Clean
+8,Automobile,Roadster,Honda,S2000,2016,White,,70000,Salvaged
+5,Automobile,Minivan,Toyota,Sienna,2020,Red,,2500,Clean
+10,Automobile,Coupe,Toyota,Supra,2021,Red,GR,10000,Clean
+3,Automobile,Pickup Truck,Toyota,Tacoma,2016,White,TRD Off-Road,50000,Salvaged

@@ -17,7 +17,7 @@ Instructions:
 			1. Right Click Databases
 			2. Click Import Data-Tier Application...
 			3. Introduction: Next
-			4. Import Settings
+			4. Import Settings:
 				Import from local disk (Find MikeDB.bacpac)
 			5. Database Settings: Next
 			6. Summary: Finish
@@ -26,5 +26,7 @@ Instructions:
 		2. Execute PrintVehicleInventory.exe
 
 *Note:
-	VehicleReport.xlsx already exists in SourceCode\bin\Debug\Export
-	If you would like to run the code, please remove this prior to running.
+	Program will create file VehicleReport.xlsx in the SourceCode\bin\Debug\Export
+	directory. Github doesn't allow .XLSX extensions to be uploaded so I've placed
+	VehicleReport_OwnedVehicles.csv and VehicleReport_Jay_Leno.csv in the directory
+	to represent the named sheets within VehicleReport.xlsx.

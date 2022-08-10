@@ -1,0 +1,4 @@
+﻿Category,SubCategory,Make,Model,Year,Color,Trim,StartingMileage,LastRecordedMileage,Title,InPosession
+Automobile,Sedan,Honda,Civic,2020,Red,EX,16,2000,Clean,True
+Automobile,Roadster,Honda,S2000,2008,Blue,,25000,85000,Clean,True
+Automobile,Pickup Truck,Toyota,Tacoma,2016,White,TRD Off-Road,4,50000,Salvaged,True
