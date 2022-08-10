@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MikeDB" Class="MikeDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=MikeDB;Integrated Security=True" SettingsObjectName="PrintVehicleInventory.Properties.Settings" SettingsPropertyName="MikeDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDTS" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleSubCategory" Member="VehicleSubCategories">
+    <Type Name="VehicleSubCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="VehicleSubCategory_VehicleModel" Member="VehicleModels" ThisKey="ID" OtherKey="VehicleSubCategoryID" Type="VehicleModel" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleAttribute" Member="VehicleAttributes">
+    <Type Name="VehicleAttribute">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VehicleEntityID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="VehicleEntity_VehicleAttribute" Member="VehicleEntity" ThisKey="VehicleEntityID" OtherKey="ID" Type="VehicleEntity" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleCategory" Member="VehicleCategories">
+    <Type Name="VehicleCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleEntity" Member="VehicleEntities">
+    <Type Name="VehicleEntity">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Association Name="VehicleEntity_VehicleAttribute" Member="VehicleAttributes" ThisKey="ID" OtherKey="VehicleEntityID" Type="VehicleAttribute" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleInventory" Member="VehicleInventories">
+    <Type Name="VehicleInventory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VIN" Type="System.String" DbType="NVarChar(17) NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleModelID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="VehicleModel_VehicleInventory" Member="VehicleModel" ThisKey="VehicleModelID" OtherKey="ID" Type="VehicleModel" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleInventoryUser" Member="VehicleInventoryUsers">
+    <Type Name="VehicleInventoryUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleInventoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsOwner" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDTS" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ModifiedDTS" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleManufacturer" Member="VehicleManufacturers">
+    <Type Name="VehicleManufacturer">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryOfOrigin" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleModel" Member="VehicleModels">
+    <Type Name="VehicleModel">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleManufacturerID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VehicleSubCategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="VehicleModel_VehicleInventory" Member="VehicleInventories" ThisKey="ID" OtherKey="VehicleModelID" Type="VehicleInventory" />
+      <Association Name="VehicleSubCategory_VehicleModel" Member="VehicleSubCategory" ThisKey="VehicleSubCategoryID" OtherKey="ID" Type="VehicleSubCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VehicleValue" Member="VehicleValues">
+    <Type Name="VehicleValue">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(255) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VehicleEntityID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="VehicleAttributeID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OwnedVehicles" Member="OwnedVehicles">
+    <Type Name="OwnedVehicle">
+      <Column Name="InventoryNumber" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Category" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategory" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Make" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Trim" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Mileage" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetVehicleDetailByUserID" Method="GetVehicleDetailByUserID">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetVehicleDetailByUserIDResult">
+      <Column Name="Category" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="SubCategory" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Make" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Model" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Trim" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="StartingMileage" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="LastRecordedMileage" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="InPosession" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

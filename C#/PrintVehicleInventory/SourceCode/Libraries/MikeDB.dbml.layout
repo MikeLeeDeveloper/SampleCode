@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.25, 9" name="MikeDB">
+  <DataContextMoniker Name="/MikeDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c1386b00-9068-480a-9215-a8cdbeedc040" absoluteBounds="0.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MikeDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="12dafcc2-b228-4601-95ab-b80b8bcf41a9" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8cde2b2e-24f9-46a3-8114-30dbae52f10e" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleSubCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79007ff0-225a-4a6c-b8cd-95b4f7f02a5f" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="30d2730d-5c62-4174-80ed-c1a902629849" absoluteBounds="3.5, 3.875, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleAttribute" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5df9a3c6-c3e2-41da-a5f0-718bd9d59a67" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="86981050-8ba3-4daf-aa10-deae999d6ff4" absoluteBounds="6.75, 3.75, 2, 1.193992513020834">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="049cdc12-0c3f-4c6f-8a8a-94bbf566d908" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0bbba269-b12a-4232-861b-4efc7ee74027" absoluteBounds="0.75, 4.125, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleEntity" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b7269df-aa4a-440a-9bb1-d10dac19d438" absoluteBounds="0.765, 4.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c133b07-25b9-4d59-b956-ae34a7becbf1" absoluteBounds="6.25, 1, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleInventory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c73b032e-2143-40be-9e20-253254139def" absoluteBounds="6.265, 1.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7e684c4e-0e45-4ebc-a35d-473ccff2c057" absoluteBounds="3.75, 6.75, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleInventoryUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="61729c20-4fff-4ef3-be79-90a561bcff10" absoluteBounds="3.765, 7.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fa330711-267f-49ab-a144-2479a9c2e497" absoluteBounds="6.75, 5.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleManufacturer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d629c78d-e48f-40b6-93e1-255cec74101f" absoluteBounds="6.765, 6.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="68f74abc-c8be-44fd-a346-5f7e244e587c" absoluteBounds="3.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleModel" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c24ed686-586c-4508-9513-f9a32f972752" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fcf58434-0c0f-41df-9c7f-49813f56a125" absoluteBounds="8.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MikeDBDataContext/VehicleValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c23ba82-c636-476e-9241-b80e8a3b8785" absoluteBounds="8.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.81814697265625); (3.5 : 4.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MikeDBDataContext/VehicleEntity/VehicleEntity_VehicleAttribute" />
+      <nodes>
+        <classShapeMoniker Id="0bbba269-b12a-4232-861b-4efc7ee74027" />
+        <classShapeMoniker Id="30d2730d-5c62-4174-80ed-c1a902629849" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.78929768880208); (6.25 : 1.78929768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MikeDBDataContext/VehicleModel/VehicleModel_VehicleInventory" />
+      <nodes>
+        <classShapeMoniker Id="68f74abc-c8be-44fd-a346-5f7e244e587c" />
+        <classShapeMoniker Id="3c133b07-25b9-4d59-b956-ae34a7becbf1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/MikeDBDataContext/VehicleSubCategory/VehicleSubCategory_VehicleModel" />
+      <nodes>
+        <classShapeMoniker Id="8cde2b2e-24f9-46a3-8114-30dbae52f10e" />
+        <classShapeMoniker Id="68f74abc-c8be-44fd-a346-5f7e244e587c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b2ef8259-8ce7-4b7c-838c-97fb4df4c034" absoluteBounds="9, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/MikeDBDataContext/OwnedVehicle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b349ad4-9dad-45d9-a4f5-c6d30faa6819" absoluteBounds="9.015, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
