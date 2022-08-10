@@ -17,8 +17,8 @@ namespace PrintVehicleInventory.Controller
         #region "Methods"
         public void Dispose()
         {
-            //_mikeDBDataContext.Dispose();
-            //_mikeDBDataContext = null;
+            _mikeDBDataContext.Dispose();
+            _mikeDBDataContext = null;
         }
         public Vehicle(string connString)
         {
