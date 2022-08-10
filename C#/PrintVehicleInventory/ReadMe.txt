@@ -27,6 +27,6 @@ Instructions:
 
 *Note:
 	Program will create file VehicleReport.xlsx in the SourceCode\bin\Debug\Export
-	directory. Github doesn't allow .XLSX extensions to be uploaded so I've placed
-	VehicleReport_OwnedVehicles.csv and VehicleReport_Jay_Leno.csv in the directory
-	to represent the named sheets within VehicleReport.xlsx.
+	directory. Github doesn't allow .XLSX extensions to be displayed so I've also 
+	placed VehicleReport_OwnedVehicles.csv and VehicleReport_Jay_Leno.csv in the 
+	directory to represent the named sheets within VehicleReport.xlsx.
