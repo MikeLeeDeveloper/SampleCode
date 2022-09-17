@@ -22,4 +22,4 @@ Note:
 		5. Navigate to https://sites.google.com/chromium.org/driver/downloads?authuser=0
 		and click on the ChromeDriver hyperlink that applies to you
 		6. Download the zip file for your operating system
-		7. Copy and replace the chromedriver.exe from zip file into the Selenium directory
+		7. Copy and replace the chromedriver.exe from zip file into the Resources directory
