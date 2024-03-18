@@ -14,3 +14,7 @@ Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. Open RoomDoorDataSet.txt and copy all 1000 rows into your clipboard<br />
 &nbsp;&nbsp;&nbsp;&nbsp;2. In RemoveConsecutiveValuesCalculateTimeDifference.sql, replace sample<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data on 13 and 14 with copied data.
+<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;If you would like to create your own dataset, please reference my other project,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Create Random Door Status Data<br />
+&nbsp;&nbsp;&nbsp;&nbsp;https://github.com/MikeLeeDeveloper/SampleCode/tree/main/Python/CreateRandomDoorStatusData
