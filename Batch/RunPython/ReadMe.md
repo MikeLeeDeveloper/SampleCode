@@ -10,7 +10,7 @@ Description:<br />
 Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. Place RunPython.bat in same the directory as the python file to run<br />
 &nbsp;&nbsp;&nbsp;&nbsp;2. Verify the python file you want to run is named the same as the directory<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or as "Program.py" (Case Sensitive)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or as "Program.py" (Case Sensitive)<br />
 &nbsp;&nbsp;&nbsp;&nbsp;3. Right click inside the directory and click "Open PowerShell window here"<br />
 &nbsp;&nbsp;&nbsp;&nbsp;4. Type in .\RunPython.bat
 <br /><br />
