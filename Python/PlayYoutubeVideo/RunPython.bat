@@ -26,9 +26,9 @@ if "!pythonEx!"=="" set pythonEx=!defaultEx!
 if "!pythonEx!"=="" (
 	echo Error: Executable must be named after the current directory or Program.py
 ) else (
-	rem Direct path to default Python install location used
-	rem If code does not execute, modify below file path to your Python executable
-	%USERPROFILE%/AppData/Local/Programs/Python/Python310/python.exe !pythonEx!
+	python3 !pythonEx!
+	rem If python3 does not execute natively, use direct path to your python.exer executable
+	rem %USERPROFILE%/AppData/Local/Programs/Python/Python310/python.exe !pythonEx!
 )
 
 endlocal
