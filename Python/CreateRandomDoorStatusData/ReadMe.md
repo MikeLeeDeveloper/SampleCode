@@ -7,5 +7,5 @@ Description:
 Instructions:
 	1. Download and install Python3
 		https://www.python.org/downloads/
-	2. Run RunPython.bat 
-	3. Script will execute and create file RoomDoorDataSet.txt
+  2. Run RunPython.bat 
+  3. Script will execute and create file RoomDoorDataSet.txt
