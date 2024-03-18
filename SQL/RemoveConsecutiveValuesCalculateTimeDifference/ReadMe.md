@@ -13,4 +13,4 @@ Description:
 Instructions:
 	1. Open RoomDoorDataSet.txt and copy all 1000 rows into your clipboard
 	2. In RemoveConsecutiveValuesCalculateTimeDifference.sql, replace sample
-	   data on 11 and 12 with copied data.
+	   data on 13 and 14 with copied data.
