@@ -35,7 +35,7 @@ DECLARE @Results TABLE(
 [RoomName] VARCHAR(10) NOT NULL,
 [DoorName] VARCHAR(10) NOT NULL,
 [Status] VARCHAR(10) NOT NULL,
-[Durration] VARCHAR(255) NOT NULL,
+[Duration] VARCHAR(255) NOT NULL,
 [CreatedDTS] DATETIME NOT NULL
 )
 
@@ -92,7 +92,7 @@ BEGIN
 		  ,[RoomName]
 		  ,[DoorName]
 		  ,[Status]
-		  ,[Durration] = IIF(CONVERT(INT,ISNULL(DATEDIFF(HOUR,[CreatedDTS],[NextDTS]),0)) < 24,
+		  ,[Duration] = IIF(CONVERT(INT,ISNULL(DATEDIFF(HOUR,[CreatedDTS],[NextDTS]),0)) < 24,
 							-- If duration is under 24 hours
 							CONVERT(VARCHAR, DATEADD(SECOND, ISNULL(DATEDIFF(SECOND,[CreatedDTS],[NextDTS]),0), 0), 114),
 							-- If duration is over 24 hours, interpolate in total hours (VARCHAR 114 excludes days)
