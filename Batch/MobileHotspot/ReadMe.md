@@ -12,7 +12,7 @@ Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;3. Be sure to revert back when no longer on hot spot for more stable connectivity.
 <br /><br />
 Note:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; If you are using your computer as a wifi repeater:<br />
-&nbsp;&nbsp;&nbsp;&nbsp; 1. Open MobileHotspotHopLimit.bat in a text editor<br />
-&nbsp;&nbsp;&nbsp;&nbsp; 2. Change:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hHopLimit=65 to hHopLimit=64
+&nbsp;&nbsp;&nbsp;&nbsp;If you are using your computer as a wifi repeater:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;1. Open MobileHotspotHopLimit.bat in a text editor<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2. Change:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hHopLimit=65 to hHopLimit=64
