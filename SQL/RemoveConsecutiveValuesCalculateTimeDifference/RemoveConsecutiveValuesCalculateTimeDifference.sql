@@ -111,7 +111,7 @@ BEGIN
 			  ,[Status]
 			  ,[IsConsecutive]
 			  ,[CreatedDTS]
-			  ,[NextDTS] = LEAD([CreatedDTS]) OVER (ORDER BY [CreatedDTS])
+			  ,[NextDTS] = LEAD([CreatedDTS],1) OVER (ORDER BY [CreatedDTS])
 		FROM @RoomDoorStatus
 	) as q
 
