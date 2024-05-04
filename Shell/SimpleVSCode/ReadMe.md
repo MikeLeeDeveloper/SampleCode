@@ -12,7 +12,7 @@ Instructions:<br />
 wget https://github.com/MikeLeeDeveloper/SampleCode/blob/main/Shell/SimpleVSCode/SimpleVSCode.sh
 ```
 
-&nbsp;&nbsp;&nbsp;&nbsp;2. Open the script in a text editor and replace {{Directory Path}} in the projectDirectory<br />
+&nbsp;&nbsp;&nbsp;&nbsp;2. Open SimpleVSCode.sh in a text editor and replace {{Directory Path}} in the projectDirectory<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variable to your desired project directory.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ex.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;projectDirectory="/Users/$USER/{{Directory Path}}"<br />
