@@ -4,7 +4,7 @@ Description:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;This shell script allows MacOS/Linux users to create and deploy repeatable custom project<br />
 &nbsp;&nbsp;&nbsp;&nbsp;templates using Visual Studio Code. Templates can be configured to install all required<br />
 &nbsp;&nbsp;&nbsp;&nbsp;extensions and packages.
-<br /><br />
+<br /><br /><br />
 Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. In terminal, place shell script in your directory of choice.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To download directly to your current directory, use command:<br />
