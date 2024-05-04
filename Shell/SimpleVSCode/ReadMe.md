@@ -35,5 +35,3 @@ index)
 Commands to execute
 ;;
 ```
-
-Add template name to Project Template Array inside App Setting
