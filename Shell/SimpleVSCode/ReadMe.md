@@ -2,9 +2,9 @@ Created By: Mike Lee<br />
 Created On: 2024-05-04<br />
 Description:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;This shell script allows MacOS/Linux users to create and deploy repeatable custom project<br />
-&nbsp;&nbsp;&nbsp;&nbsp;templates using Visual Studio Code. Templates can be configured to install all required<br />
-&nbsp;&nbsp;&nbsp;&nbsp;extensions and packages.
-<br /><br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;templates using the .NET CLI for Visual Studio Code. Templates can be configured to install all<br /> &nbsp;&nbsp;&nbsp;&nbsp;required
+extensions and packages.<br />
+<br /><br />
 Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. In terminal, place shell script in your directory of choice.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To download directly to your current directory, use command:<br />
