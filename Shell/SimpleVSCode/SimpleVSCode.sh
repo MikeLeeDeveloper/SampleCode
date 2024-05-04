@@ -70,7 +70,6 @@ do
             projectSelected=1
         fi
 
-        # Break line
         echo
     done
 
