@@ -24,13 +24,6 @@ if [ "$projectDirectory" == "/Users/$USER/{{Directory Path}}" ]
 then
     echo "Please configure projectDirectory variable in SimpleVSCode.sh file."
     exit 1
-# Verify .NET version configured
-# Validation not needed if variable set to .NET in current use
-#elif [ "$dotNetVersion" == "{{Major and Minor Version Number}}" ]
-#then
-#    echo "Please configure dotNetVersion variable in SimpleVSCode.sh file."
-#    echo "To find version number, use command: dotnet --version"
-#    exit 1
 fi
 
 # Loop main if user does not confirm project
