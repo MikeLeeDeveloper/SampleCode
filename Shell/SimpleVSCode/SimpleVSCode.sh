@@ -11,13 +11,13 @@ projectDirectory="/Users/$USER/{{Directory Path}}"
 dotNetVersion=$(dotnet --version)
 dotNetVersion=$(echo $dotNetVersion | cut -d '.' -f 1,2)
 dotNetVersion="net${dotNetVersion}"
-# --------------------------------------------------------
 
-# Configured project templates
+# Project Templates
 # New project templates can be added to this array
 declare project
 project[0]="Console APP (.NET Framework)"
 project[1]="TO DO"
+# --------------------------------------------------------
 
 # Verify directory path is configured
 if [ "$projectDirectory" == "/Users/$USER/{{Directory Path}}" ]
@@ -111,8 +111,8 @@ mkdir $projectDirectory
 cd $projectDirectory
 echo "Directory Created: ${projectDirectory}"
 
-# Run commands to create project template
-# New project templates can be added to this switch
+# Project Template Settings
+# ---------------------------------------------------------------------
 case $projectNumber in 
     # Console APP (.NET Framework)
     0)
@@ -120,9 +120,10 @@ case $projectNumber in
     ;;
     # TO DO
     1)
-    echo "TO DO project template requires configuration"
+    echo "TO DO: Project not configured"
     ;;
 esac
+# ---------------------------------------------------------------------
 
 echo "Project Created: ${projectName}"
 
