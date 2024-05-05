@@ -18,7 +18,7 @@ declare project
 project[0]="Console APP (.NET Framework)"
 project[1]="TO DO"
 
-# New project template executables can be added to the switch
+# New project template's CLI commands can be added to this switch
 # $1 = Index of project template array
 # $2 = Project Name
 function createProject(){
