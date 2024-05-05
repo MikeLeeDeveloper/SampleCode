@@ -3,8 +3,8 @@
 # App Settings
 # --------------------------------------------------------
 # Directory
-# ex. projectDirectory="/Users/$USER/Documents/GitHub/"
-projectDirectory="/Users/$USER/{{Directory Path}}"
+projectDirectory="/Users/$USER/Documents/GitHub/"
+# projectDirectory="/Users/$USER/{{Directory Path}}"
 
 # .NET SDK Version
 # ex. dotNetVersion="net8.0" 
@@ -13,10 +13,27 @@ dotNetVersion=$(echo $dotNetVersion | cut -d '.' -f 1,2)
 dotNetVersion="net${dotNetVersion}"
 
 # Project Templates
-# New project templates can be added to this array
+# New project template names can be added to this array
 declare project
 project[0]="Console APP (.NET Framework)"
 project[1]="TO DO"
+
+# New project template executables can be added to the switch
+# $1 = Index of project template array
+# $2 = Project Name
+function createProject(){
+    # Project Template Settings
+    case $1 in 
+        # Console APP (.NET Framework)
+        0)
+        dotnet new console --framework $dotNetVersion --use-program-main
+        ;;
+        # TO DO
+        1)
+        echo "TO DO: Project not configured"
+        ;;
+    esac
+}
 # --------------------------------------------------------
 
 # Verify directory path is configured
@@ -110,20 +127,8 @@ mkdir $projectDirectory
 cd $projectDirectory
 echo "Directory Created: ${projectDirectory}"
 
-# Project Template Settings
-# ---------------------------------------------------------------------
-case $projectNumber in 
-    # Console APP (.NET Framework)
-    0)
-    dotnet new console --framework $dotNetVersion --use-program-main
-    ;;
-    # TO DO
-    1)
-    echo "TO DO: Project not configured"
-    ;;
-esac
-# ---------------------------------------------------------------------
-
+# Create project using App Setting function
+createProject $projectNumber $projectName
 echo "Project Created: ${projectName}"
 
 # Open project in VS Code
