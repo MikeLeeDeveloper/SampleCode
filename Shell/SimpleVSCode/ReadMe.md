@@ -25,8 +25,9 @@ sh SimpleVSCode.sh
 Create New Template<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. Open SimpleVSCode.sh in a text editor<br />
 &nbsp;&nbsp;&nbsp;&nbsp;2. In the App Settings block, add the new project template's name to 'project' array.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;3. In the Project Template Settings block, use the following template to add your CLI<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commands:<br />
+&nbsp;&nbsp;&nbsp;&nbsp;3. In the App Settings block, add the new project templates CLI commands to the<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;createProject() function.<br /><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the following template to add your CLI commands:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3a. The index of your new project template in the 'project' array followed by ')'.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b. Commands to execute<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3c. Break switch using ';;'<br />

@@ -3,8 +3,8 @@
 # App Settings
 # --------------------------------------------------------
 # Directory
-projectDirectory="/Users/$USER/Documents/GitHub/"
-# projectDirectory="/Users/$USER/{{Directory Path}}"
+# ex. projectDirectory="/Users/$USER/Documents/GitHub/"
+projectDirectory="/Users/$USER/{{Directory Path}}"
 
 # .NET SDK Version
 # ex. dotNetVersion="net8.0" 
@@ -22,7 +22,6 @@ project[1]="TO DO"
 # $1 = Index of project template array
 # $2 = Project Name
 function createProject(){
-    # Project Template Settings
     case $1 in 
         # Console APP (.NET Framework)
         0)
