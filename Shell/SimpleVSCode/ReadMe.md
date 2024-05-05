@@ -32,7 +32,7 @@ Create New Template<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3b. Commands to execute<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3c. Break switch using ';;'<br />
 ```
-index)
+Index)
 Commands to execute
 ;;
 ```
