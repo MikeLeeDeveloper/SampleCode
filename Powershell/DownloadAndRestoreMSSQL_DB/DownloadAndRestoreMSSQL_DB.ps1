@@ -2,8 +2,8 @@
 # ------------------------------
 # Get today's date
 $todayDate = (Get-Date).ToString("yyyy-MM-dd")
-$DB_DataPath = "{{.mdf File Directory}}}"
-$DB_LogPath = "{{.ldf File Directory}}}"
+$DB_DataPath = "{{.mdf File Directory}}"
+$DB_LogPath = "{{.ldf File Directory}}"
 # ex.$DB_DataPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
 # ex.$DB_LogPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
 
