@@ -59,8 +59,8 @@ function RestoreDB_SQLCommand($dbName, $dbFilePath){
     )
 
     INSERT INTO @fileList EXEC ('RESTORE FILELISTONLY FROM DISK = ''$dbFilePath''')
-    DECLARE @DataFileName VARCHAR(MAX) = (SELECT [LogicalName] FROM @fileList WHERE [PhysicalName] LIKE '%.mdf')
-    DECLARE @LogFileName VARCHAR(MAX) = (SELECT [LogicalName] FROM @fileList WHERE [PhysicalName] LIKE '%.ldf')
+    DECLARE @dataFileName VARCHAR(MAX) = (SELECT [LogicalName] FROM @fileList WHERE [PhysicalName] LIKE '%.mdf')
+    DECLARE @logFileName VARCHAR(MAX) = (SELECT [LogicalName] FROM @fileList WHERE [PhysicalName] LIKE '%.ldf')
 
     -- Restore Database
     RESTORE DATABASE ${dbName}
@@ -68,8 +68,8 @@ function RestoreDB_SQLCommand($dbName, $dbFilePath){
 
     -- Replace existing DB, move Data and Log files to new host's path
     WITH REPLACE,
-    MOVE @DataFileName TO '$mdfFilePath',
-    MOVE @LogFileName TO '$ldfFilePath'
+    MOVE @dataFileName TO '$mdfFilePath',
+    MOVE @logFileName TO '$ldfFilePath'
 "@
 
     # Execute SQL command
