@@ -2,11 +2,10 @@
 # ------------------------------
 # Get today's date
 $todayDate = (Get-Date).ToString("yyyy-MM-dd")
-$DB_DataPath = "{{.mdf Filepath}}}"
-$DB_LogPath = "{{.ldf File Path}}}"
-# ex. $SQL_ServerInstance = "MIKEDB19"
-# ex. $DB_DataPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
-# ex. $DB_LogPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
+$DB_DataPath = "{{.mdf File Directory}}}"
+$DB_LogPath = "{{.ldf File Directory}}}"
+# ex.$DB_DataPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
+# ex.$DB_LogPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
 
 
 # Databases to download
@@ -17,6 +16,25 @@ $dbBackups = @(
 # ------------------------------
 # End App Settings
 
+function RestoreDB_PowerShell($dbName, $dbFilePath){
+    $relocateData = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile("${dbName}_data", "${DB_DataPath}${dbName}.mdf")
+    $relocateLog = New-Object Microsoft.SqlServer.Management.Smo.RelocateFile("${dbName}_log", "${DB_DataPath}${dbName}.ldf")
+
+    # Kill existing processes
+    try{
+        $sqlSServer = New-Object Microsoft.SqlServer.Management.Smo.Server $SQL_ServerInstance
+        $sqlSServer.KillAllProcesses($dbName)
+    }
+    catch{
+        # Kill process will fail if new install
+    }
+
+    # Restore database
+    # Note: 2024-05-09 Restore will fail if logical filenames for data and log do not match 
+    Restore-SqlDatabase -ServerInstance $SQL_ServerInstance `
+    -Database $fileName.split(".")[0] -BackupFile $filePath `
+    -ReplaceDatabase -RelocateFile @($relocateData, $relocateLog)
+}
 function RestoreDB_SQLCommand($dbName, $dbFilePath){
     $mdfFilePath = "${DB_DataPath}${dbName}.mdf"
     $ldfFilePath = "${DB_LogPath}${dbName}.ldf"
@@ -80,6 +98,7 @@ function RestoreDB_SQLCommand($dbName, $dbFilePath){
 foreach ($db in $dbBackups){
     # Get file name, file path, and check if file exists
     $fileName = $db.split("/")[-1]
+    $dbName = $fileName.split(".")[0]
     $filePath = "${PWD}\Resources\${fileName}"
     $fileExists = Test-Path $filePath
 
@@ -94,10 +113,11 @@ foreach ($db in $dbBackups){
             echo "Unable to download file. Invalid URL."
         }
         
-        if($fileExists = Test-Path $filePath){
+        if(Test-Path $filePath){
             try {
                 # Restore database
-                RestoreDB_SQLCommand $fileName.split(".")[0] $filePath
+                echo "Restoring: ${dbName}"
+                RestoreDB_SQLCommand $dbName $filePath
             }
             catch {
                 # Restore failed
