@@ -35,7 +35,7 @@ function RestoreDB_PowerShell($dbName, $dbFilePath){
     # Restore database
     # Note: 2024-05-09 Restore will fail if logical filenames for data and log do not match 
     Restore-SqlDatabase -ServerInstance $SQL_ServerInstance `
-    -Database $fileName.split(".")[0] -BackupFile $filePath `
+    -Database $dbName -BackupFile $filePath `
     -ReplaceDatabase -RelocateFile @($relocateData, $relocateLog)
 }
 function RestoreDB_SQLCommand($dbName, $dbFilePath){
