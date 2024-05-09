@@ -2,10 +2,13 @@
 # ------------------------------
 # Get today's date
 $todayDate = (Get-Date).ToString("yyyy-MM-dd")
-$DB_DataPath = "{{.mdf File Directory}}"
-$DB_LogPath = "{{.ldf File Directory}}"
-# ex.$DB_DataPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
-# ex.$DB_LogPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
+$SQL_ServerInstance = "{{SQL Server Name}}"
+$DB_DataPath = "{{.mdf Directory Path}}"
+$DB_LogPath = "{{.ldf Directory Path}}"
+[bool] $usePowershell = 0
+# ex. $SQL_ServerInstance = "MIKEDB19"
+# ex. $DB_DataPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
+# ex. $DB_LogPath = "C:\Program Files\Microsoft SQL Server\MSSQL15.MIKEDB19\MSSQL\DATA\"
 
 
 # Databases to download
@@ -117,7 +120,13 @@ foreach ($db in $dbBackups){
             try {
                 # Restore database
                 echo "Restoring: ${dbName}"
-                RestoreDB_SQLCommand $dbName $filePath
+
+                if($usePowershell){
+                    RestoreDB_PowerShell $dbName $filePath
+                }
+                else{
+                    RestoreDB_SQLCommand $dbName $filePath
+                }
             }
             catch {
                 # Restore failed

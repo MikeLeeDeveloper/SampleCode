@@ -7,9 +7,10 @@ Description:<br />
 <br /><br />
 Instructions:<br />
 &nbsp;&nbsp;&nbsp;&nbsp;1. Open DownloadAndRestoreMSSQL_DB.ps1 in a text editor and update the following variables:<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1a. <b>$DB_DataPath</b>: Location for .mdf file<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1b. <b>$DB_DataPath</b>: Location for .ldf file<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1c. <b>$dbBackups</b>: .bak files you want to download<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1a. <b>$SQL_ServerInstance</b>: Name of your Server<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1b. <b>$DB_DataPath</b>: Location for .mdf file<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1c. <b>$DB_DataPath</b>: Location for .ldf file<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1d. <b>$dbBackups</b>: .bak files you want to download<br />
 &nbsp;&nbsp;&nbsp;&nbsp;2. Verify Account name for SQL Server has access to Resource Directory<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Open Sql Server Configuration Manager<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2a. Right click your SQL Server instance and select Properties<br />
