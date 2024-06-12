@@ -27,13 +27,13 @@ END
 -- Unpivot Table
 DECLARE @SQL NVARCHAR(MAX) = '
 SELECT [Table] = ''' + @TableName + ''' 
-		,[' + @SearchField + '] = [ID]
-		,[Attribute]
-		,[Value]
+	  ,[' + @SearchField + '] = [ID]
+	  ,[Attribute]
+	  ,[Value]
 FROM
 (
 	SELECT [ID] = [' + @SearchField + ']
-			,' + @ColNVarchar + ' 
+		  ,' + @ColNVarchar + ' 
 	FROM ' + @TableName +'
 	WHERE [' + @SearchField + '] = ''' + @SearchValue + '''
 ) as Source
