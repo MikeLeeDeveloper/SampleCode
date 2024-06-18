@@ -29,8 +29,6 @@ SELECT
 						+ ' = NULL'
 FROM sys.columns as c
 INNER JOIN sys.types as t ON c.[user_type_id] = t.[user_type_id]
-LEFT OUTER JOIN sys.index_columns as ic ON ic.[object_id] = c.[object_id] AND ic.[column_id] = c.[column_id]
-LEFT OUTER JOIN sys.indexes as i ON ic.[object_id] = i.[object_id] AND ic.[index_id] = i.[index_id]
 WHERE c.[object_id] = OBJECT_ID(@TableName)
 ORDER BY c.[name] ASC
 -- Uncomment line below to order by table order
