@@ -60,6 +60,3 @@ WHERE c.[object_id] = OBJECT_ID(@TableName)
 AND c.[is_identity] != 1
 ORDER BY c.[column_id] ASC
 --ORDER BY c.[name] ASC
-ORDER BY c.[name] ASC
--- Uncomment line below to order by table order
---ORDER BY c.[column_id] ASC
