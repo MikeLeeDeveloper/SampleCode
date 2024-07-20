@@ -8,8 +8,8 @@ DECLARE @ColNVarchar NVARCHAR(MAX)
 -- Get Column Names
 SELECT @Col = ISNULL(@Col + ', ','''') + QUOTENAME([Name])
 	  ,@ColNVarchar = ISNULL(@ColNVarchar + ', ','''') 
-			+ QUOTENAME([Name]) + ' = CONVERT(NVARCHAR(MAX),' 
-			+ QUOTENAME([Name]) + ')'
+			+ QUOTENAME([Name]) + ' = ISNULL(CONVERT(NVARCHAR(MAX),' 
+			+ QUOTENAME([Name]) + '),'''')'
 FROM 
 (
 	SELECT [Name]
